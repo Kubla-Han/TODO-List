@@ -1,0 +1,102 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Изменено на flex-start, чтобы список был выше */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.todo-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Стили для формы ввода */
+#todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px 0 0 4px; /* Скругление только слева */
+    font-size: 16px;
+    outline: none;
+}
+
+#todo-form button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Скругление только справа */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+#todo-form button:hover {
+    background-color: #4cae4c;
+}
+
+/* Стили для самого списка задач */
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+/* Стили для текста задачи */
+#todo-list li span {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* Класс для выполненных задач (применяется через JS) */
+.completed {
+    text-decoration: line-through;
+    color: #999;
+    background: #eef;
+}
+
+/* Стили для кнопки удаления */
+#todo-list button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.2s;
+}
+
+#todo-list button:hover {
+    background-color: #c9302c;
+}
